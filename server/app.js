@@ -49,7 +49,7 @@ const requestHandler = (request, response) => {
                     response.end("<script>window.location = '/';</script>");
                 return;
             }
-            if (process.platform != 'win32'){
+            //if (process.platform != 'win32'){
                 psList().then(data => {
                     if (reqtype == "api")
                         response.write(JSON.stringify(data));
@@ -61,11 +61,11 @@ const requestHandler = (request, response) => {
                         response.write('</table><script src="/jquery-3.3.1.min.js"></script><script src="/script.js"></script>')
                     }
                     response.end();
-                });
+                });/*
             } else {
                 response.write("oh no u windows. die, i mean...")
                 response.end("die");
-            }
+            }*/
             return;
         }
         var mimeType = mimeTypes[path.extname(filename).split(".")[1]];
