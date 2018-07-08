@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "taskkill /im node.exe", 0

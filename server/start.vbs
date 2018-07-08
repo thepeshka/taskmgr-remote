@@ -1,1 +1,1 @@
-CreateObject("Wscript.Shell").Run "node app.js", 0
+CreateObject("Wscript.Shell").Run "node app.js > app.log", 0
